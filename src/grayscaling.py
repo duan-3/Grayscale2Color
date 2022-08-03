@@ -8,9 +8,9 @@ from PIL import Image
 count = 0
 for count in range(1,4320):
     try:
-        img = Image.open("./resized/" + str(count) + ".png").convert("L")
+        img = Image.open("../DataSet/resized/" + str(count) + ".png").convert("L")
         img_numpy = np.array(img,'uint8')
-        cv2.imwrite("./gray/" + str(count) + ".png", img_numpy)
+        cv2.imwrite("../DataSet/gray/" + str(count) + ".png", img_numpy)
         count += 1
     except OSError as e :
         print(count)
